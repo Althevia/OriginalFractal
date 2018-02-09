@@ -13,6 +13,7 @@ public void setup()
   translate(310,420);
   rotate(-PI/2);
   stairs(94,0,0,0,0,80,90);
+  
 }
 
 public void draw()
@@ -24,13 +25,15 @@ public void stairs(int scales, int myx, int myy, int startx, int starty, int siz
   if (scales == 0)
   {
     rotate(PI/36);
-    arc(startx+myx, starty+myy, sizex, sizey, 0, PI, CHORD);
+    arc(startx+myx, starty+myy, sizex, sizey, 0, PI);
+    line(startx+myx-sizex/2, starty+myy, startx+myx+sizex/2, starty+myy);
   }
   else 
   {
     //stairs(scales-1, myx+2,myy+2, startx, starty, sizex+5, sizey+5);
     rotate(PI/38);
-    arc(startx+myx, starty+myy, sizex, sizey, 0, PI, CHORD);
+    arc(startx+myx, starty+myy, sizex, sizey, 0, PI);
+    line(startx+myx-sizex/2, starty+myy, startx+myx+sizex/2, starty+myy);
     stairs(scales-1, myx+2,myy+2, startx, starty, sizex+5, sizey+5);
 
   }
