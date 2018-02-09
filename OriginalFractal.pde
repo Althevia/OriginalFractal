@@ -24,13 +24,13 @@ public void stairs(int scales, int myx, int myy, int startx, int starty, int siz
   if (scales == 0)
   {
     rotate(PI/36);
-    arc(startx+myx, starty+myy, sizex, sizey, 0, PI, CLOSE);
+    arc(startx+myx, starty+myy, sizex, sizey, 0, PI, CHORD);
   }
   else 
   {
     //stairs(scales-1, myx+2,myy+2, startx, starty, sizex+5, sizey+5);
     rotate(PI/38);
-    arc(startx+myx, starty+myy, sizex, sizey, 0, PI, CLOSE);
+    arc(startx+myx, starty+myy, sizex, sizey, 0, PI, CHORD);
     stairs(scales-1, myx+2,myy+2, startx, starty, sizex+5, sizey+5);
 
   }
